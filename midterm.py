@@ -76,8 +76,8 @@ def get_login_credentials():
     while attempts < max_attempts:
         username = input("請輸入帳號：")
         password = input("請輸入密碼：")
-        confirm_username = input("請輸入帳號：")
-        confirm_password = input("請輸入密碼：")
+        confirm_username = username  # 使用第一次輸入的帳號值
+        confirm_password = password  # 使用第一次輸入的密碼值
         if username == confirm_username and password == confirm_password:
             return username, password
         else:
